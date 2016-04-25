@@ -196,7 +196,7 @@ function newGame() {
   init();  // 盤面をまっさらにする
   newShape();  // 新しい
   lose = false;
-  interval = setInterval( tick, 250 );  // 250ミリ秒ごとにtickという関数を呼び出す
+  interval = setInterval( tick, 350 );  // 350ミリ秒ごとにtickという関数を呼び出す
 }
 
 newGame();  // ゲームを開始する
