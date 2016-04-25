@@ -72,7 +72,11 @@ function tick() {
     clearLines();  // ライン消去処理
     if (lose) {
       // もしゲームオーバなら最初から始める
-      newGame();
+      document.getElementById("diesound").play();
+      setTimeout(function(){
+	      newGame();
+      },3000);
+      clearInterval(interval);
       return false;
     }
     // 新しい操作ブロックをセットする
@@ -89,6 +93,7 @@ function freeze() {
       }
     }
   }
+  document.getElementById("freezesound").play();
 }
 
 // 操作ブロックを回す処理
